@@ -1,3 +1,5 @@
+# Requirements
+
 ## Functional
 
 * [x] Informs the user that their balance is $387

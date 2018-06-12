@@ -24,7 +24,7 @@ app.post('/accept-payment', (req, res) => {
   const token = req.body.stripeToken;
 
   const charge = stripe.charges.create({
-    amount: 99,
+    amount: 38700,
     currency: 'usd',
     description: 'Example charge',
     source: token,
