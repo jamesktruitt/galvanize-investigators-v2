@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const cors = require('cors');
 
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+
 const app = express();
 
 app.use(morgan('tiny'));
@@ -19,7 +21,20 @@ app.get('/', (req, res) => {
 });
 
 app.post('/accept-payment', (req, res) => {
-  res.json(req.body);
+  const token = req.body.stripeToken;
+
+  const charge = stripe.charges.create({
+    amount: 99,
+    currency: 'usd',
+    description: 'Example charge',
+    source: token,
+  });
+
+  charge.then(result => res.json(result))
+    .catch(err => {
+      console.error(err);
+      res.sent('There was an error :(')
+    })
 });
 
 app.use((req, res, next) => {
