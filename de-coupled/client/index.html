@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='style.css' />
+  </head>
+  <body>
+    <header>
+      <h1>galvanize</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Pay Your Bill</h2>
+      </section>
+      <!-- Add payment form here -->
+    </main>
+    <form action='http://localhost:5000/accept-payment' method='POST'>
+      <script src='https://checkout.stripe.com/checkout.js' class='stripe-button' data-key='pk_test_g8tGsdXqt4VUd0pDAoloF0sU' data-amount='999'
+        data-name='Demo Site' data-description='Example charge' data-image='https://stripe.com/img/documentation/checkout/marketplace.png'
+        data-locale='auto'>
+        </script>
+    </form>
+  </body>
+</html>
