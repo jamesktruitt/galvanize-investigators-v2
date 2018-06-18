@@ -13,12 +13,41 @@
         <h3>Your total $387</h3>
       </section>
       <!-- Add payment form here -->
+      <!-- <form id='buy-my-thing'>
+        <div>
+          <label for='amount'>Amount to Pay (Total $387)</label>
+        </div>
+        <div>
+          <label for='credit-card'>Credit card number</label>
+        </div>
+        <div>
+          <input type='text' name='credit-card' value=''>
+        </div>
+        <div>
+          <label for='cc-code'>Security code</label>
+        </div>
+        <div>
+          <input type='text' name='cc-code' value=''>
+        </div>
+        <div>
+          <input type='number' name='amount' id='amount-to-pay' min='0' max='387'>
+        </div>
+        <div>
+          <button>Pay</button>
+        </div>
+      </form> -->
       <form action='http://localhost:5000/accept-payment' method='POST'>
-        <script src='https://checkout.stripe.com/checkout.js' class='stripe-button' data-key='pk_test_g8tGsdXqt4VUd0pDAoloF0sU' data-amount='38700'
-        data-name='Demo Site' data-description='Example charge' data-image='https://stripe.com/img/documentation/checkout/marketplace.png'
+        <script src='https://checkout.stripe.com/checkout.js' class='stripe-button'
+        data-key='pk_test_g8tGsdXqt4VUd0pDAoloF0sU'
+        data-amount='38700'
+        data-name='Demo Site'
+        data-description='Example charge'
+        data-image='https://stripe.com/img/documentation/checkout/marketplace.png'
         data-locale='auto'>
         </script>
-    </form>
+      </form>
     </main>
+    <script src='https://checkout.stripe.com/checkout.js'></script>
+    <script src='main.js'></script>
   </body>
 </html>
