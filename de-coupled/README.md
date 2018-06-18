@@ -6,8 +6,6 @@ You're making the new Galvanize website, and need to include a way to accept pay
 
 Note that you'll need to do some work on the client and some on the server. Be careful about committing any secret keys.
 
-You can choose to start from the [server-rendered folder](./server-rendered) OR the [de-coupled folder](./de-coupled). Choose one.
-
 Deploy your work and add a link to it [here](https://github.com/jamesktruitt/galvanize-investigators-v2).
 
 ## Setup
